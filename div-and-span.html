@@ -4,8 +4,8 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Classes and IDs</title>
-    <!-- this demonsteates how to use classes and ids-->
+    <title>Divs and Spans</title>
+    <!-- this demonsteates how to use divs and spans-->
     <style>
       body {
         background-color: #f5f5ff;
@@ -22,6 +22,7 @@
       }
       p {
         font-size: 24px;
+        color: #313131;
       }
       #styled-by-id {
         font-family: Georgia, "Times New Roman", Cambria, serif;
@@ -49,6 +50,19 @@
       .nav-link li {
         display: inline-block;
       }
+      div {
+        background-color: lightblue;
+        width: auto;
+        height: 200;
+        padding: 10px 20px;
+        border: 4px solid black;
+        border-radius: 5px;
+        text-align: center;
+      }
+      span {
+        text-decoration: underline;
+        font-style: italic;
+      }
     </style>
   </head>
 
@@ -70,14 +84,23 @@
       </ul>
     </nav>
     <main>
-      <h1>Classes and IDs</h1>
+      <h1>Divs and Spans</h1>
 
-      <p id="styled-by-id">
-        This paragraph will show the effest of giving an element an ID and
-        Styling that ID
-      </p>
+      <!-- 
+        div, short for division, is a block element that acts like 
+        a conteiner for muiltple block elements
+      -->
+      <div>
+        <p id="styled-by-id">
+          This paragraph will show the effest of giving an element an ID and
+          Styling that ID
+        </p>
 
-      <p>Does this paragraph have the same styling as my other paragraph</p>
+        <p>
+          Does this paragraph have the same <span>styling</span> as my other
+          paragraph
+        </p>
+      </div>
     </main>
   </body>
 </html>
