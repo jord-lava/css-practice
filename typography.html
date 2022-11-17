@@ -7,21 +7,37 @@
     <title>Divs and Spans</title>
     <!-- this demonsteates how to use divs and spans-->
     <style>
+      /* 
+        not on web page:
+          text-transform: used to make everything uppercase, lowercase ect
+          letter-spacing: the space between the letters
+          word-spacing: space between the words
+          line hight: space between the lines
+
+        more notes:
+          font-weight: think bold
+          text-decoation: think underline
+          font-style: think italic
+      */
+      html {
+        font-size: 62.5%;
+      }
       body {
         background-color: #f5f5ff;
         color: midnightblue;
+        font-family: Georgia, "Times New Roman", Times, serif;
       }
 
       h1 {
         text-align: center;
-        font-size: 40px;
+        font-size: 4rem;
       }
       nav {
         background-color: cornflowerblue;
-        padding: 10px 0px;
+        padding: 1rem 0rem;
       }
       p {
-        font-size: 24px;
+        font-size: 2.4rem;
         color: #313131;
       }
       #styled-by-id {
@@ -33,17 +49,17 @@
       }
       nav ul li {
         display: inline-block;
-        margin: 10px;
-        font-size: 20px;
+        margin: 1rem;
+        font-size: 2rem;
       }
       li {
-        margin: 10px;
-        font-size: 20px;
+        margin: 1rem;
+        font-size: 2rem;
       }
       .nav-link {
-        padding: 5px;
-        margin: 4px;
-        border: 2px solid black;
+        padding: 0.5rem;
+        margin: 0.4rem;
+        border: 0.2rem solid black;
         background-color: #191970;
         color: #f5f5ff;
       }
@@ -53,10 +69,10 @@
       div {
         background-color: lightblue;
         width: auto;
-        height: 200;
-        padding: 10px 20px;
-        border: 4px solid black;
-        border-radius: 5px;
+        height: 20rem;
+        padding: 1rem 2rem;
+        border: 0.4rem solid black;
+        border-radius: 0.5rem;
         text-align: center;
       }
       span {
@@ -81,11 +97,13 @@
           <a href="classes-and-ids.html" class="nav-link">Classes and ID</a>
         </li>
         <li><a href="div-and-span.html" class="nav-link">Divs and Spans</a></li>
-        <li><a href="typography.html">Typography Principles</a></li>
+        <li>
+          <a href="typography.html" class="nav-link">Typography Principles</a>
+        </li>
       </ul>
     </nav>
     <main>
-      <h1>Divs and Spans</h1>
+      <h1>Typography Principles</h1>
 
       <!-- 
         div, short for division, is a block element that acts like 
