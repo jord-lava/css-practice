@@ -3,6 +3,39 @@
   which is with a hint of blue, using the background-color CSS property and a font
   color of midnightblue using the color CSS property
 */
+* {
+  line-height: 1rem;
+}
+html {
+  font-size: 62.5%;
+}
+
+nav {
+  background-color: cornflowerblue;
+  padding: 1rem 0rem;
+}
+nav ul {
+  list-style: none;
+}
+nav ul li {
+  display: inline-block;
+  margin: 1rem;
+  font-size: 2rem;
+}
+li {
+  margin: 1rem;
+  font-size: 2rem;
+}
+.nav-link {
+  padding: 0.5rem;
+  margin: 0.4rem;
+  border: 0.2rem solid black;
+  background-color: #191970;
+  color: #f5f5ff;
+}
+.nav-link li {
+  display: inline-block;
+}
 body {
   background-color: #f5f5ff;
   color: midnightblue;
