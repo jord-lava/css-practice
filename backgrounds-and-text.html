@@ -4,40 +4,32 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Divs and Spans</title>
+    <title>Backgrounds and text</title>
     <!-- this demonsteates how to use divs and spans-->
     <style>
-      /* 
-        not on web page:
-          text-transform: used to make everything uppercase, lowercase ect
-          letter-spacing: the space between the letters
-          word-spacing: space between the words
-          line hight: space between the lines
-
-        more notes:
-          font-weight: think bold
-          text-decoation: think underline
-          font-style: think italic
-      */
-      html {
-        font-size: 62.5%;
-      }
       body {
         background-color: #f5f5ff;
         color: midnightblue;
-        font-family: Georgia, "Times New Roman", Times, serif;
+        /* 
+          adds image as a background
+          background-size: changes size of image
+          background repeat: does the image apear once? r does it repeat?
+        */
+        background-image: url(images/flower.jpg);
+        background-size: 280px;
+        background-repeat: repeat;
       }
 
       h1 {
         text-align: center;
-        font-size: 4rem;
+        font-size: 40px;
       }
       nav {
         background-color: cornflowerblue;
-        padding: 1rem 0rem;
+        padding: 10px 0px;
       }
       p {
-        font-size: 2.4rem;
+        font-size: 24px;
         color: #313131;
       }
       #styled-by-id {
@@ -49,17 +41,17 @@
       }
       nav ul li {
         display: inline-block;
-        margin: 1rem;
-        font-size: 2rem;
+        margin: 10px;
+        font-size: 20px;
       }
       li {
-        margin: 1rem;
-        font-size: 2rem;
+        margin: 10px;
+        font-size: 20px;
       }
       .nav-link {
-        padding: 0.5rem;
-        margin: 0.4rem;
-        border: 0.2rem solid black;
+        padding: 5px;
+        margin: 4px;
+        border: 2px solid black;
         background-color: #191970;
         color: #f5f5ff;
       }
@@ -69,10 +61,10 @@
       div {
         background-color: lightblue;
         width: auto;
-        height: 20rem;
-        padding: 1rem 2rem;
-        border: 0.4rem solid black;
-        border-radius: 0.5rem;
+        height: 200;
+        padding: 10px 20px;
+        border: 4px solid black;
+        border-radius: 5px;
         text-align: center;
       }
       span {
@@ -108,7 +100,7 @@
       </ul>
     </nav>
     <main>
-      <h1>Typography Principles</h1>
+      <h1>Backgrounds and text</h1>
 
       <!-- 
         div, short for division, is a block element that acts like 
