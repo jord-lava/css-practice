@@ -5,6 +5,34 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Inline CSS</title>
+    <style>
+      nav {
+        background-color: cornflowerblue;
+        padding: 10px 0px;
+      }
+      nav ul {
+        list-style: none;
+      }
+      nav ul li {
+        display: inline-block;
+        margin: 10px;
+        font-size: 20px;
+      }
+      li {
+        margin: 10px;
+        font-size: 20px;
+      }
+      .nav-link {
+        padding: 5px;
+        margin: 4px;
+        border: 2px solid black;
+        background-color: #191970;
+        color: #f5f5ff;
+      }
+      .nav-link li {
+        display: inline-block;
+      }
+    </style>
   </head>
   <!--
     in the body tag, we use the style attribut to add CSS (cascading Style Sheets) 
@@ -17,18 +45,27 @@
   <body style="background-color: #f5f5ff; color: midnightblue">
     <nav>
       <ul>
-        <li><a href="index.html">Inline CSS</a></li>
-        <li><a href="internal-css.html">Internal CSS</a></li>
-        <li><a href="external-css.html">External CSS</a></li>
-        <li><a href="testing-cascading.html">Testing Cascading</a></li>
-        <li><a href="classes-and-ids.html">Classes and ID</a></li>
-        <li><a href="div-and-span.html" class="nav-link">Divs and Spans</a></li>
-        <li><a href="typography.html">Typography Principles</a></li>
+        <li><a href="index.html" class="nav-link">Inline CSS</a></li>
+        <li><a href="internal-css.html" class="nav-link">Internal CSS</a></li>
+        <li><a href="external-css.html" class="nav-link">External CSS</a></li>
         <li>
-          <a href="backgrounds-and-text.html" class="nav-link">
-            background and text
+          <a href="testing-cascading.html" class="nav-link">
+            Testing Cascading
           </a>
         </li>
+        <li>
+          <a href="classes-and-ids.html" class="nav-link">Classes and ID</a>
+        </li>
+        <li><a href="div-and-span.html" class="nav-link">Divs and Spans</a></li>
+        <li>
+          <a href="typography.html" class="nav-link">Typography Principles</a>
+        </li>
+        <li>
+          <a href="backgrounds-and-text.html" class="nav-link">
+            Background and text
+          </a>
+        </li>
+        <li><a href="gradients.html" class="nav-link">Gradients</a></li>
       </ul>
     </nav>
     <main>

@@ -4,40 +4,29 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Divs and Spans</title>
-    <!-- this demonsteates how to use divs and spans-->
-    <style>
-      /* 
-        not on web page:
-          text-transform: used to make everything uppercase, lowercase ect
-          letter-spacing: the space between the letters
-          word-spacing: space between the words
-          line hight: space between the lines
+    <title>Gradients</title>
 
-        more notes:
-          font-weight: think bold
-          text-decoation: think underline
-          font-style: think italic
-      */
-      html {
-        font-size: 62.5%;
-      }
+    <style>
       body {
-        background-color: #f5f5ff;
+        /* 
+          linear gradient (derection, color, color) 
+          decrection can be top, top left, 60deg
+          rember prefixes (o, moz, webkit)
+        */
+        background-image: linear-gradient(to left, pink, blue);
         color: midnightblue;
-        font-family: Georgia, "Times New Roman", Times, serif;
       }
 
       h1 {
         text-align: center;
-        font-size: 4rem;
+        font-size: 40px;
       }
       nav {
         background-color: cornflowerblue;
-        padding: 1rem 0rem;
+        padding: 10px 0px;
       }
       p {
-        font-size: 2.4rem;
+        font-size: 24px;
         color: #313131;
       }
       #styled-by-id {
@@ -49,17 +38,17 @@
       }
       nav ul li {
         display: inline-block;
-        margin: 1rem;
-        font-size: 2rem;
+        margin: 10px;
+        font-size: 20px;
       }
       li {
-        margin: 1rem;
-        font-size: 2rem;
+        margin: 10px;
+        font-size: 20px;
       }
       .nav-link {
-        padding: 0.5rem;
-        margin: 0.4rem;
-        border: 0.2rem solid black;
+        padding: 5px;
+        margin: 4px;
+        border: 2px solid black;
         background-color: #191970;
         color: #f5f5ff;
       }
@@ -67,12 +56,13 @@
         display: inline-block;
       }
       div {
-        background-color: lightblue;
+        /* radial gradiemts (shape, start color, color, color) */
+        background-image: radial-gradient(circle, blue, pink, lime);
         width: auto;
-        height: 20rem;
-        padding: 1rem 2rem;
-        border: 0.4rem solid black;
-        border-radius: 0.5rem;
+        height: 200;
+        padding: 10px 20px;
+        border: 4px solid black;
+        border-radius: 5px;
         text-align: center;
       }
       span {
@@ -109,22 +99,16 @@
       </ul>
     </nav>
     <main>
-      <h1>Typography Principles</h1>
+      <h1>Gradients</h1>
 
       <!-- 
         div, short for division, is a block element that acts like 
         a conteiner for muiltple block elements
       -->
       <div>
-        <p id="styled-by-id">
-          This paragraph will show the effest of giving an element an ID and
-          Styling that ID
-        </p>
+        <p id="styled-by-id">How to use gradients</p>
 
-        <p>
-          Does this paragraph have the same <span>styling</span> as my other
-          paragraph
-        </p>
+        <p>how to use <span>Linear and Radial</span> Gradients</p>
       </div>
     </main>
   </body>
