@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Transform</title>
+    <title>Transition and Animations</title>
 
     <style>
       html {
@@ -18,8 +18,51 @@
         */
         background-color: #f5f5ff;
         color: midnightblue;
+
+        /* state before animation occurs */
+        opacity: 0;
+        transform: translateY(-100px);
+
+        /*
+         this defines the animation
+
+          difine name as fade-in
+          dine duration as 1s
+          defines timing funtion (how the styling chnages in animation) as ease-in (start slow goes faster at end)
+          define delay as 2s
+          define fill-mode (styling is kept at end of animation) as forward (keep)
+
+          not in this example:
+
+          iteration-count - how many times you want it to run
+          direction - forward (normal) or backward (reverse). forward and then backward (alternate).
+                      backward and forward (alternate-reverse)
+
+        */
+        -o-animation: fade-in 1s ease-in 2s forwards;
+        -moz-animation: fade-in 1s ease-in 2s forwards;
+        -webkit-animation: fade-in 1s ease-in 2s forwards;
+        animation: fade-in 1s ease-in 2s forwards;
       }
 
+      /* 
+        defines animation
+        use @keyframes to show its an animation
+        use same name defined in animation property
+        define staring point
+        define end point of animation
+        NOTE: define %s of where defferent styling occurs
+      */
+      @keyframes fade-in {
+        from {
+          opacity: 0;
+          transform: translateY(-100px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
       h1 {
         text-align: center;
         font-size: 40px;
@@ -44,6 +87,13 @@
         margin: 10px;
         font-size: 20px;
       }
+
+      /* these are user acuions that start transition */
+      nav a:hover,
+      nav a:focus {
+        background-color: #f5f5ff;
+        color: #191970;
+      }
       li {
         margin: 10px;
         font-size: 20px;
@@ -54,6 +104,14 @@
         border: 2px solid black;
         background-color: #191970;
         color: #f5f5ff;
+
+        -o-transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
+        -moz-transition: background-color 0.5s ease-in-out,
+          color 0.5s ease-in-out;
+        -webkit-transition: background-color 0.5s ease-in-out,
+          color 0.5s ease-in-out;
+
+        transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
       }
       .nav-link li {
         display: inline-block;
@@ -67,26 +125,6 @@
         border: 4px solid black;
         border-radius: 5px;
         text-align: center;
-      }
-
-      #translate {
-        /* moves from orginanil spot (x,y) */
-        transform: translate(80px, 25px);
-      }
-
-      #roate {
-        margin-top: 230px;
-        /* rotates (deg) */
-        transform: rotate(15deg);
-      }
-      #scale {
-        margin-top: 200px;
-        /* increase/decrease size xtimes (x,y) */
-        transform: scale(0.5, 2);
-      }
-      #skew {
-        margin: 200px;
-        transform: skew(10deg, 10deg);
       }
       span {
         text-decoration: underline;
@@ -117,70 +155,16 @@
         border-radius: 40px;
 
         /* radial gradiemts (shape, start color, color, color) */
-        background-color: rgb(54, 148, 202);
+        background: -o-radial-gradient(#91eae4, #86a8e7);
+        background: -moz-radial-gradient(#91eae4, #86a8e7);
+        background: -webkit-radial-gradient(#91eae4, #86a8e7);
+        background: radial-gradient(#91eae4, #84a8e7);
 
         color: #313131;
 
         text-align: center;
         font-weight: bold;
         text-decoration: none;
-      }
-
-      /* arrow */
-      .box {
-        width: 10rem;
-        background-color: #040214;
-        padding: 1rem;
-        margin: 1rem;
-        border-radius: 1rem;
-
-        position: relative;
-      }
-
-      .box::before {
-        content: "";
-        width: 1rem;
-        height: 1rem;
-        background-color: #040214;
-        overflow: hidden;
-
-        position: absolute;
-        right: -0.5rem;
-
-        top: 50%;
-
-        transform: rotate(45deg);
-
-        margin-top: -0.5rem;
-      }
-
-      /* jumping ball */
-      .loader {
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        background: linear-gradient(
-          to bottom,
-          #cb60b3 0%,
-          #c146a1 50%,
-          #a80077 51%,
-          #db36a4 100%
-        );
-
-        animation: jump 1.5s ease-out infinite alternate;
-
-        margin-top: 50px;
-      }
-
-      @keyframes jump {
-        from {
-          transform: translateY(0px) rotate(0deg) scale(1, 1);
-          opacity: 1;
-        }
-        to {
-          transform: translateY(-50px) rotate(360deg) scale(0.8, 0.8);
-          opacity: 0.8;
-        }
       }
     </style>
   </head>
@@ -218,7 +202,7 @@
       </ul>
     </nav>
     <main>
-      <h1>Transform</h1>
+      <h1>Transition and Animations</h1>
 
       <!-- 
         div, short for division, is a block element that acts like 
@@ -226,50 +210,40 @@
       -->
       <section>
         <div>
-          <p id="styled-by-id">Transformed</p>
+          <p id="styled-by-id">How to use gradients</p>
 
-          <p>how to use <span>transform</span> properties</p>
+          <p>how to use <span>Linear and Radial</span> Gradients</p>
         </div>
 
-        <div id="translate">
-          <p id="styled-by-id">Transformed</p>
+        <div>
+          <p id="styled-by-id">How to use gradients</p>
 
-          <p>how <span>tranlate</span> can be used to move things</p>
+          <p>how to use <span>Linear and Radial</span> Gradients</p>
         </div>
 
-        <div id="roate">
-          <p id="styled-by-id">Transformed</p>
+        <div>
+          <p id="styled-by-id">How to use gradients</p>
 
-          <p>
-            how <span>roate</span> can be used to roate something a # of deg
-          </p>
+          <p>how to use <span>Linear and Radial</span> Gradients</p>
         </div>
 
-        <div id="scale">
-          <p id="styled-by-id">Transformed</p>
+        <div>
+          <p id="styled-by-id">How to use gradients</p>
 
-          <p>
-            how <span>scale</span> can be used to scale something to me
-            biggee/smaller
-          </p>
+          <p>how to use <span>Linear and Radial</span> Gradients</p>
         </div>
 
-        <div id="skew">
-          <p id="styled-by-id">Transformed</p>
+        <div>
+          <p id="styled-by-id">How to use gradients</p>
 
-          <p>
-            how <span>skew</span> to do somthing.... deffinatly somthing.. like
-            its been blown over by wind... coming from muiltple decrections
-          </p>
+          <p>how to use <span>Linear and Radial</span> Gradients</p>
         </div>
-      </section>
 
-      <section class="box">
-        <div class="box-content"><p>testing arrows</p></div>
-      </section>
+        <div>
+          <p id="styled-by-id">How to use gradients</p>
 
-      <section>
-        <div class="loader"></div>
+          <p>how to use <span>Linear and Radial</span> Gradients</p>
+        </div>
       </section>
 
       <!-- back to top buttion -->
