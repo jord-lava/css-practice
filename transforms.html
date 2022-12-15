@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Gradients</title>
+    <title>Transform</title>
 
     <style>
       html {
@@ -16,7 +16,7 @@
           decrection can be top, top left, 60deg
           rember prefixes (o, moz, webkit)
         */
-        background-image: linear-gradient(to left, pink, blue);
+        background-color: #f5f5ff;
         color: midnightblue;
       }
 
@@ -68,6 +68,26 @@
         border-radius: 5px;
         text-align: center;
       }
+
+      #translate {
+        /* moves from orginanil spot (x,y) */
+        transform: translate(80px, 25px);
+      }
+
+      #roate {
+        margin-top: 230px;
+        /* rotates (deg) */
+        transform: rotate(15deg);
+      }
+      #scale {
+        margin-top: 200px;
+        /* increase/decrease size xtimes (x,y) */
+        transform: scale(0.5, 2);
+      }
+      #skew {
+        margin: 200px;
+        transform: skew(10deg, 10deg);
+      }
       span {
         text-decoration: underline;
         font-style: italic;
@@ -97,10 +117,7 @@
         border-radius: 40px;
 
         /* radial gradiemts (shape, start color, color, color) */
-        background: -o-radial-gradient(#91eae4, #86a8e7);
-        background: -moz-radial-gradient(#91eae4, #86a8e7);
-        background: -webkit-radial-gradient(#91eae4, #86a8e7);
-        background: radial-gradient(#91eae4, #84a8e7);
+        background-color: rgb(54, 148, 202);
 
         color: #313131;
 
@@ -147,39 +164,41 @@
       -->
       <section>
         <div>
-          <p id="styled-by-id">How to use gradients</p>
+          <p id="styled-by-id">Transformed</p>
 
-          <p>how to use <span>Linear and Radial</span> Gradients</p>
+          <p>how to use <span>transform</span> properties</p>
         </div>
 
-        <div>
-          <p id="styled-by-id">How to use gradients</p>
+        <div id="translate">
+          <p id="styled-by-id">Transformed</p>
 
-          <p>how to use <span>Linear and Radial</span> Gradients</p>
+          <p>how <span>tranlate</span> can be used to move things</p>
         </div>
 
-        <div>
-          <p id="styled-by-id">How to use gradients</p>
+        <div id="roate">
+          <p id="styled-by-id">Transformed</p>
 
-          <p>how to use <span>Linear and Radial</span> Gradients</p>
+          <p>
+            how <span>roate</span> can be used to roate something a # of deg
+          </p>
         </div>
 
-        <div>
-          <p id="styled-by-id">How to use gradients</p>
+        <div id="scale">
+          <p id="styled-by-id">Transformed</p>
 
-          <p>how to use <span>Linear and Radial</span> Gradients</p>
+          <p>
+            how <span>scale</span> can be used to scale something to me
+            biggee/smaller
+          </p>
         </div>
 
-        <div>
-          <p id="styled-by-id">How to use gradients</p>
+        <div id="skew">
+          <p id="styled-by-id">Transformed</p>
 
-          <p>how to use <span>Linear and Radial</span> Gradients</p>
-        </div>
-
-        <div>
-          <p id="styled-by-id">How to use gradients</p>
-
-          <p>how to use <span>Linear and Radial</span> Gradients</p>
+          <p>
+            how <span>skew</span> to do somthing.... deffinatly somthing.. like
+            its been blown over by wind... coming from muiltple decrections
+          </p>
         </div>
       </section>
 
