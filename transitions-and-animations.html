@@ -10,7 +10,9 @@
       html {
         scroll-behavior: smooth;
       }
+
       body {
+        display: inline-block;
         /*
           linear gradient (derection, color, color)
           decrection can be top, top left, 60deg
@@ -63,25 +65,47 @@
           transform: translateY(0);
         }
       }
+
       h1 {
         text-align: center;
         font-size: 40px;
       }
+
+      section {
+        position: relative;
+
+        width: 25%;
+
+        float: left;
+
+        margin: 20px;
+        margin-right: 2.5%;
+
+        background-color: #191970;
+        height: 50vh;
+
+        border-radius: 20px;
+      }
+
       nav {
         background-color: cornflowerblue;
         padding: 10px 0px;
       }
+
       p {
         font-size: 24px;
         color: #313131;
       }
+
       #styled-by-id {
         font-family: Georgia, "Times New Roman", Cambria, serif;
         font-weight: bold;
       }
+
       nav ul {
         list-style: none;
       }
+
       nav ul li {
         display: inline-block;
         margin: 10px;
@@ -94,10 +118,12 @@
         background-color: #f5f5ff;
         color: #191970;
       }
+
       li {
         margin: 10px;
         font-size: 20px;
       }
+
       .nav-link {
         padding: 5px;
         margin: 4px;
@@ -113,12 +139,14 @@
 
         transition: background-color 0.5s ease-in-out, color 0.5s ease-in-out;
       }
+
       .nav-link li {
         display: inline-block;
       }
+
       div {
         background-color: lightblue;
-        width: auto;
+        width: 80%;
         height: 200;
         margin: 30px;
         padding: 10px 20px;
@@ -126,10 +154,12 @@
         border-radius: 5px;
         text-align: center;
       }
+
       span {
         text-decoration: underline;
         font-style: italic;
       }
+
       #back-to-top {
         display: flex;
         position: fixed;
@@ -166,6 +196,20 @@
         font-weight: bold;
         text-decoration: none;
       }
+
+      #cleared {
+        /* 
+          when we dont want an element to float beside other elements
+          we use the clear property will break the floating of elements
+          and any element added to the website underneath this element 
+          will also not float beside other elements of the page
+
+          NOTE: the value you use or float is the value is the value you should use for clear
+                can be left, right, and inherit NOT center
+        */
+
+        clear: left;
+      }
     </style>
   </head>
 
@@ -199,6 +243,7 @@
             Transitions and Animations
           </a>
         </li>
+        <li><a href="positioning.html" class="nav-link"> Positioning</a></li>
       </ul>
     </nav>
     <main>
@@ -214,37 +259,49 @@
 
           <p>how to use <span>Linear and Radial</span> Gradients</p>
         </div>
+      </section>
 
-        <div>
-          <p id="styled-by-id">How to use gradients</p>
-
-          <p>how to use <span>Linear and Radial</span> Gradients</p>
-        </div>
-
-        <div>
-          <p id="styled-by-id">How to use gradients</p>
-
-          <p>how to use <span>Linear and Radial</span> Gradients</p>
-        </div>
-
-        <div>
-          <p id="styled-by-id">How to use gradients</p>
-
-          <p>how to use <span>Linear and Radial</span> Gradients</p>
-        </div>
-
-        <div>
-          <p id="styled-by-id">How to use gradients</p>
-
-          <p>how to use <span>Linear and Radial</span> Gradients</p>
-        </div>
-
+      <section>
         <div>
           <p id="styled-by-id">How to use gradients</p>
 
           <p>how to use <span>Linear and Radial</span> Gradients</p>
         </div>
       </section>
+
+      <section>
+        <div>
+          <p id="styled-by-id">How to use gradients</p>
+
+          <p>how to use <span>Linear and Radial</span> Gradients</p>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <p id="styled-by-id">How to use gradients</p>
+
+          <p>how to use <span>Linear and Radial</span> Gradients</p>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <p id="styled-by-id">How to use gradients</p>
+
+          <p>how to use <span>Linear and Radial</span> Gradients</p>
+        </div>
+      </section>
+
+      <section>
+        <div>
+          <p id="styled-by-id">How to use gradients</p>
+
+          <p>how to use <span>Linear and Radial</span> Gradients</p>
+        </div>
+      </section>
+
+      <p id="cleared">This element should not be by the other boxs</p>
 
       <!-- back to top buttion -->
       <a href="#top" id="back-to-top">
