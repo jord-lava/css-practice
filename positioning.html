@@ -34,6 +34,10 @@
       nav {
         background-color: cornflowerblue;
         padding: 10px 0px;
+        /* hides it but still saves space for it (visible or hidden) */
+        /* visibility: hidden; */
+        /* doesnt save space, like it doesnt exist (block, inline, inline-block..., none) */
+        /* display: none; */
       }
       p {
         font-size: 24px;
@@ -55,7 +59,18 @@
         margin: 10px;
         font-size: 20px;
       }
+      nav li {
+        display: inline-block;
+        width: 40%;
+      }
       .nav-link {
+        /* 
+          inline elements cant change width and hight
+
+          NOTE: thiss is importanst for flex and grid 
+        */
+        display: inline-block;
+        width: 100%;
         padding: 5px;
         margin: 4px;
         border: 2px solid black;
